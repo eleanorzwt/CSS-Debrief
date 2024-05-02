@@ -12,7 +12,7 @@
 
 <body>
     <nav id="nav-bar">
-        <img class="sea-scape" src="" alt="sea-scape">
+        <img class="sea-scape" src="./resources/scape.png" alt="sea-scape">
         <div class="right-nav">
             <a href="#">Home</a>
             <a href="#">About</a>
@@ -72,14 +72,18 @@
         <div class="form-wrapper">
             <h3>Form Heading</h3>
             <form action="#POST">
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="input-box">
-
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="input-box">
-
-                <label for="pwd">Password:</label>
-                <input type="password" id="pwd" name="pwd"> <!-- ADD YOUR PATTERN AND TITLE ATTRIBUTES HERE-->
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="input-box" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="input-box" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="please input a valid email" required>
+                </div>
+                <div>
+                    <label for="pwd">Password:</label>
+                    <input type="password" id="pwd" name="pwd" required> <!-- ADD YOUR PATTERN AND TITLE ATTRIBUTES HERE-->
+                </div>
                 <br>
                 <button type="submit">Submit</button>
 
